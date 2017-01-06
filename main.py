@@ -5,8 +5,7 @@ from serializer import serialize
 
 if __name__ == '__main__':
     
-    print detect_labels()
-    #db = DB()
-    #db.store(time.time(), detect_labels())
+    db = DB()
+    db.store(time.time(), detect_labels())
 
-    #serialize(db)
+    serialize(db, 'data.txt')
