@@ -19,7 +19,7 @@ def detect_and_store_labels(db, path, camera_name):
 
 if __name__ == '__main__':
     db = DB()
-    schedule.every(1).minutes.do(detect_and_store_labels(db, 'data.txt', u'Węzeł Modlnica'))
+    schedule.every(5).minutes.do(detect_and_store_labels(db, 'data.txt', u'Węzeł Modlnica'))
 
     while True:
         schedule.run_pending()
