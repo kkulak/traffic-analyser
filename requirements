@@ -1,2 +1,4 @@
 boto3
 schedule
+bs4
+requests
