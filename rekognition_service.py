@@ -1,15 +1,10 @@
 import boto3
 
 
-def detect_labels():
+def detect_labels_for(image):
     client = boto3.client('rekognition')
     response = client.detect_labels(
-        Image={
-            'S3Object': {
-                'Bucket': 'rekognition-samples',
-                'Name': 'crowd.png'
-            }
-        },
+        Image={'Bytes': image},
         MinConfidence=0
     )
 
